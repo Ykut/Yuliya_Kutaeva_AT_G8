@@ -8,6 +8,7 @@ public class PrintOddNumbers {
                 System.out.println(num);
             }
         }
+        System.out.println("\n");
     }
 
 }
