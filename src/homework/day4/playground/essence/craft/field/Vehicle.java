@@ -1,8 +1,9 @@
 package homework.day4.playground.essence.craft.field;
-
 import homework.day4.playground.essence.Matter;
+import homework.day4.playground.essence.craft.Rideable;
+import homework.day4.playground.essence.craft.Transportable;
 
-public abstract class Vehicle extends Matter {
+public abstract class Vehicle extends Matter implements Transportable, Rideable {
     protected String name;
 
     public Vehicle(int mass, String name) {
