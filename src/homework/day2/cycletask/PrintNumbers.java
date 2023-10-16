@@ -4,9 +4,10 @@ public class PrintNumbers{
     public void printNum(){
         int i=0;
         while (i<=20) {
-            System.out.println(i+" ");
+            System.out.print(i+" ");
             i++;
         }
+
 
     }
 }
