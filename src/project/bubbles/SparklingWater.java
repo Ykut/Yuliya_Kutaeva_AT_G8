@@ -4,12 +4,15 @@ public class SparklingWater extends Water{
     private boolean isOpened;
     private Bubble[] bubbles;
 
-    public SparklingWater(String colorOfWater, String transparencyOfWater, String smellOfwater, double tempOfwater, boolean isOpened) {
-        super(colorOfWater, transparencyOfWater, smellOfwater, tempOfwater);
-        this.isOpened = isOpened;
+    public SparklingWater(String color, String transparency, String smell, double temperature) {
+        super(color, transparency, smell, temperature);
+        this.isOpened();
     }
 
-    public void pump (Bubble[] bubbles){
+    private void isOpened() {
+    }
+
+    public void pump(Bubble[] bubbles){
 
     }
 
@@ -21,7 +24,5 @@ public class SparklingWater extends Water{
     private void degas() {
     }
 
-    private void isOpened(){
 
-    }
 }

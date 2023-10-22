@@ -1,47 +1,47 @@
 package project.bubbles;
 
 public  class Water {
-    private String colorOfWater="no";
-    private String transparencyOfWater="transparent";
-    private String smellOfwater = "no";
-    private double tempOfwater = 0;
+    private String color="no";
+    private String transparency="transparent";
+    private String smell = "no";
+    private double temperature = 0;
 
-    public Water(String colorOfWater, String transparencyOfWater, String smellOfwater, double tempOfwater) {
-        this.colorOfWater = colorOfWater;
-        this.transparencyOfWater = transparencyOfWater;
-        this.smellOfwater = smellOfwater;
-        this.tempOfwater = tempOfwater;
+    public Water(String color, String transparency, String smell, double temperature) {
+        this.color = color;
+        this.transparency = transparency;
+        this.smell = smell;
+        this.temperature = temperature;
     }
 
-    public String getColorOfWater() {
-        return colorOfWater;
+    public String getColor() {
+        return color;
     }
 
-    public void setColorOfWater(String colorOfWater) {
-        this.colorOfWater = colorOfWater;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public String getTransparencyOfWater() {
-        return transparencyOfWater;
+    public String getTransparency() {
+        return transparency;
     }
 
-    public void setTransparencyOfWater(String transparencyOfWater) {
-        this.transparencyOfWater = transparencyOfWater;
+    public void setTransparency(String transparency) {
+        this.transparency = transparency;
     }
 
-    public String getSmellOfwater() {
-        return smellOfwater;
+    public String getSmell() {
+        return smell;
     }
 
-    public void setSmellOfwater(String smellOfwater) {
-        this.smellOfwater = smellOfwater;
+    public void setSmell(String smell) {
+        this.smell = smell;
     }
 
-    public double getTempOfwater() {
-        return tempOfwater;
+    public double getTemperature() {
+        return temperature;
     }
 
-    public void setTempOfwater(double tempOfwater) {
-        this.tempOfwater = tempOfwater;
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
     }
 }
