@@ -1,21 +1,22 @@
 package project.containers;
 
+import project.bubbles.Bubble;
 import project.bubbles.Water;
 
 public class Bottle {
     private double volume;
-    Water water;
+    private Water water;
 
     public Bottle(double volume) {
         this.volume = volume;
     }
 
     public void open(){
-
+        //this.water.SetOpened();
     }
 
     public void warm(int temperature){
-        water.setTempOfwater(temperature);
+        //water.setTemperature(temperature);
     }
 
     public Water getWater() {
@@ -27,6 +28,9 @@ public class Bottle {
     }
 
     public void setBubbles(){
+        Bubble[] bubbles=new Bubble[10000];
+
+
 
     }
 }
