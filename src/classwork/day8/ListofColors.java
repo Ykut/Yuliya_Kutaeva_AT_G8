@@ -20,8 +20,8 @@ public class ListofColors {
         color.add(4, "Yellow");
 
         for(int i=0; i< color.size(); i++){
-            System.out.println(color.get(i=1));
-            System.out.println(color.get(i=5));
+            System.out.println(color.get(i));
+            System.out.println(color.get(i));
         }
     }
 }
