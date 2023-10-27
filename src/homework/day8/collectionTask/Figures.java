@@ -30,8 +30,6 @@ public class Figures {
             System.out.println(e.getClass() + " В список figures нельзя добавить элемент");
         }
 
-
-
         for (String str3: figures) {
             System.out.print(str3+" ");
         }
