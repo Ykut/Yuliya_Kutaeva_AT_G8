@@ -1,7 +1,7 @@
 package homework.day5;
 
 public class StringToColumn {
-    public void strToColumn(String str){
+    public static void strToColumn(String str){
 
         String[] letters = str.split("");
         for(String i:letters )

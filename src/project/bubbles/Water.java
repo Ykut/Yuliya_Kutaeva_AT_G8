@@ -44,4 +44,7 @@ public  class Water {
     public void setTemperature(double temperature) {
         this.temperature = temperature;
     }
+
+    public void SetOpened() {
+    }
 }
