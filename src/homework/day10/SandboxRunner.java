@@ -43,7 +43,8 @@ public class SandboxRunner {
 
 //На основании получившегося потока данных создать коллекцию Map, где ключ - это вес, а значение - имя
 
-        Map<Integer, String> newSandboxMap = newSandbox.stream().collect(Collectors.toMap(Sand::getWeight, Sand::getName));
+        Map<Integer, String> newSandboxMap = newSandbox.stream()
+                .collect(Collectors.toMap(Sand::getWeight, Sand::getName));
 
 //Отпечатать каждый из элементов карты в виде value:key в текстовый файл
 
