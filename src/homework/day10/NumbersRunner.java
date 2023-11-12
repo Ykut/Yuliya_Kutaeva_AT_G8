@@ -14,7 +14,7 @@ public class NumbersRunner {
 
         //Посчитать сумму всех чисел и вывести результат в консоль
 
-        Integer sum = numbers.reduce((i1, i2) -> i1+i2).get();
+        Integer sum = numbers.reduce(Integer::sum).get();
         System.out.println(sum);
     }
 }
