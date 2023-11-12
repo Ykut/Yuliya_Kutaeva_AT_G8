@@ -1,5 +1,6 @@
 package homework.day10;
 
+import java.util.List;
 import java.util.stream.Stream;
 
 public class DoublesRunners {
@@ -8,15 +9,24 @@ public class DoublesRunners {
 
 //        ќкруглить каждое число до целого
         doubles.map(aDouble -> Math.round(aDouble)).forEach(System.out::println);
+
 //        Ќа основании этого потока сгенерировать новый поток данных целых чисел из
 //        случайных чисел с границами от 0 до числа из иходного потока данных
-        //Stream<Integer> newDoubles = doubles.flatMap().toList;
-//        ”брать дубликаты значений
-        //newDoubles.distinct
 
-//        «аменить каждое число в получившемс€ потоке данных новым потоком состо€щим из обьектов Bubble в количестве равному замен€емому числу,
-//        создава€ обьекты с обьемом равным числу из исходного потока и именем по маске "Bubble vol-" + i, где i - число из исходного потока
+        List<Integer> newDoubles = doubles.map(Double::intValue).toList();
+
+//        ”брать дубликаты значений
+        newDoubles.stream().distinct().toString();
+
+//        «аменить каждое число в получившемс€ потоке данных новым потоком состо€щим из обьектов Bubble в
+//        количестве равному замен€емому числу,создава€ обьекты с обьемом равным числу из исходного потока и
+//        именем по маске "Bubble vol-" + i, где i - число из исходного потока
+
+        //List<Bubble> bubbleList = newDoubles.stream().map();
+
 //        ќтпечатать в консоль каждый из обьектов нового потока с новой строки
+
+
 //        Ќайти общий обьем полученного потока пузырьков и отпечатать в консоль
     }
 }
