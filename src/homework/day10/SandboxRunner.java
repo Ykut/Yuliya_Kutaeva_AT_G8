@@ -2,14 +2,14 @@ package homework.day10;
 
 import homework.day8.objects.Sand;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SandboxRunner {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<Sand> sandbox = new ArrayList<>();
 
         //Заполнить 5 объектами песка с весом (12, 8, 15, 7, 11)
@@ -43,8 +43,20 @@ public class SandboxRunner {
 
 //На основании получившегося потока данных создать коллекцию Map, где ключ - это вес, а значение - имя
 
-        newSandbox.stream().collect(Collectors.toMap(Sand::getWeight, Sand::getName))
-                .forEach((key, value) -> System.out.println(key + " " + value));
+        Map<Integer, String> newSandboxMap = newSandbox.stream().collect(Collectors.toMap(Sand::getWeight, Sand::getName));
+
+//Отпечатать каждый из элементов карты в виде value:key в текстовый файл
+
+        BufferedWriter out = new BufferedWriter(new FileWriter("SandboxMap.txt"));
+
+        newSandboxMap.forEach((key, value) -> {
+            try {
+                out.write(key + ":" +value+"\n");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        out.close();
 
     }
 }
