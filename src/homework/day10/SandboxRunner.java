@@ -51,7 +51,7 @@ public class SandboxRunner {
 
         newSandboxMap.forEach((key, value) -> {
             try {
-                out.write(key + ":" +value+"\n");
+                out.write(value + ":" + key + "\n");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
