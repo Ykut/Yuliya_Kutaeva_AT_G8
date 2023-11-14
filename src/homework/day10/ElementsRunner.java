@@ -1,23 +1,32 @@
 package homework.day10;
 
+import java.util.List;
 import java.util.stream.Stream;
 
 public class ElementsRunner {
     public static void main(String[] args) {
 
-        Stream<String> elements = Stream.of(
-                "Text field", "Radio", "Check-box", "Drop-down", "Picker", "Breadcrumb");
+        List<String> elements = Stream.of(
+                "Text field", "Radio", "Check-box", "Drop-down", "Picker", "Breadcrumb").toList();
 
         //≈сли слово нечетное, то заменить в нем все буквы "e" на букву "o", а если четное, то
         // заменить слово на число количества буков в этом слове
 
-        //Stream<String> elementStream = IntStream.range(1, elements.toArray().length).
-
+        elements = elements.stream().map(element -> {
+            if ((element.indexOf(element) + 1) % 2 != 0) {
+                element = element.replace("e", "o");
+                return element;
+            } else return element = Integer.toString(element.length());
+        }).peek(System.out::println).toList();
+        System.out.println();
 
         //ќставить в потоке только уникальные значени€
-        //ќтпечатать в консоль с новой строки
-        //elementStream.distinct().toList().forEach(System.out::println);
 
+        elements = elements.stream().distinct().toList();
+
+        //ќтпечатать в консоль с новой строки
+
+        elements.forEach(System.out::println);
 
     }
 }
