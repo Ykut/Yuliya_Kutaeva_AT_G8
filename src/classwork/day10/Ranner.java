@@ -3,7 +3,8 @@ package classwork.day10;
 import java.util.Arrays;
 import java.util.List;
 
-public class Ranner {
+public class
+Ranner {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("мама", "мыла", "раму", "мама", "чисто");
 
