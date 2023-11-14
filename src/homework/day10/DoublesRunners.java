@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 public class DoublesRunners {
     public static void main(String[] args) {
-        Stream<Double> doubles = Stream.of(33.42, 34.3, 0.79, 2.3426, 6.8, 13.24, 5.5, 769.9);
+        List <Double> doubles = Stream.of(33.42, 34.3, 0.79, 2.3426, 6.8, 13.24, 5.5, 769.9).toList();
 
 //        Округлить каждое число до целого
 
-        List<Integer> doubles1 = doubles.map(aDouble -> Math.toIntExact(Math.round(aDouble)))
+        List<Integer> doubles1 = doubles.stream().map(aDouble -> Math.toIntExact(Math.round(aDouble)))
                 .peek(System.out::println).toList();
 
         System.out.println();
